@@ -1,20 +1,14 @@
 
-## Unit Test
+# CLAUDE & THE PIGEON
 
-#### run PHPUnit
+This repo contains all public files associated with Claude & The Pigeon (Antiques Dealer) back-end API
 
-```bash
-# run PHPUnit all test cases
-vendor/bin/phpunit
-# or Feature test only
-vendor/bin/phpunit --testsuite Feature
-```
 
-#### Code Coverage Report
 
-```bash
-# reports is a directory name
-vendor/bin/phpunit --coverage-html reports/
-```
-A `reports` directory has been created for code coverage report. Open the dashboard.html.
+![Logo](https://github.com/willmason92/claude-website/blob/main/assets/img/claude/logos/logo.png?raw=true)
+
+
+## Authors
+
+- [@willmason92](https://github.com/willmason92)
 
