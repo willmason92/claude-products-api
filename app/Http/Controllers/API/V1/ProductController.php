@@ -43,12 +43,24 @@ class ProductController extends BaseController
      */
     public function store(ProductRequest $request)
     {
+
+        if($request->get('image')){
+
+            $name = time().'.' . explode('/', explode(':', substr($request->get('image'), 0, strpos($request->get('image'), ';')))[1])[1];
+            \Image::make($request->get('image'))->save(public_path('images/products/').$name);
+            $request->merge(['photo' => $name]);
+           
+        }
+
         $product = $this->product->create([
             'name' => $request->get('name'),
             'description' => $request->get('description'),
             'price' => $request->get('price'),
             'category_id' => $request->get('category_id'),
+            'photo' => $name,
         ]);
+
+
 
         // update pivot table
         $tag_ids = [];
