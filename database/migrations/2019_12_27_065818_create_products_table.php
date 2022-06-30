@@ -23,6 +23,8 @@ class CreateProductsTable extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
+
+        DB::update("ALTER TABLE products AUTO_INCREMENT = 1711;");
     }
 
     /**
