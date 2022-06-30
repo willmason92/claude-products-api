@@ -24,6 +24,7 @@
                   <thead>
                     <tr>
                         <th>Img</th>
+                        <th>Ref</th>
                         <th>Name</th>
                       <th>Category</th>
                       <th>Price</th>
@@ -33,6 +34,7 @@
                   <tbody>
                      <tr v-for="product in products.data" :key="product.id">
                          <td><img v-bind:src="'/images/products/' + product.photo" width="300" alt="product"></td>
+                      <td>{{product.id}}</td>
                       <td>{{product.name}}</td>
                       <td>{{product.category.name}}</td>
                       <td>{{product.price}}</td>
@@ -196,7 +198,7 @@
               }else{
                   alert('File size can not be bigger than 2 MB')
               }
-            },
+          },
           getResults(page = 1) {
 
               this.$Progress.start();
