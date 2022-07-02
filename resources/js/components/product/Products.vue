@@ -34,7 +34,7 @@
                   <tbody>
                      <tr v-for="product in products.data" :key="product.id">
                          <td><img v-bind:src="'/images/products/' + product.photo" width="300" alt="product"></td>
-                      <td>{{product.id}}</td>
+                      <td>CP00{{product.id}}</td>
                       <td>{{product.name}}</td>
                       <td>{{product.category.name}}</td>
                       <td>{{product.price}}</td>
