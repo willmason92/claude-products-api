@@ -20,11 +20,10 @@ class CreateProductsTable extends Migration
             $table->string('price');
             $table->integer('category_id');
             $table->string('photo')->nullable();
+            $table->boolean('active')->default(1);
             $table->timestamps();
             $table->softDeletes();
         });
-
-        DB::update("ALTER TABLE products AUTO_INCREMENT = 1711;");
     }
 
     /**
